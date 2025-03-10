@@ -14,21 +14,25 @@
   "author": "terablitz",
   "type": "module",
   "main": "library/index.cjs",
-  "exports":{
+  "exports": {
     "import": {
-    "default": "./library/index.esm.js",
-    "types": "./library/types/index.d.ts"
+      "default": "./library/index.esm.js",
+      "types": "./library/types/index.d.ts"
     },
     "require": {
       "default": "./library/index.cjs",
-    "types": "./library/types/index.d.ts"
+      "types": "./library/types/index.d.ts"
     }
   },
-  "files": ["library"],
+  "files": [
+    "library"
+  ],
   "scripts": {
-      "build": "rollup -c"
+    "build": "rollup -c",
+    "release-package": "npm run build && changesets publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.28.1",
     "typescript": "^5.8.2"
   }
 }
