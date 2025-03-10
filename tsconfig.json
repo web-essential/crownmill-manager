@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "declarationDir": "library/types",
+        "target": "ES6",
+        "moduleResolution": "node"
+    },
+    "include": ["source/**/*"],
+    "exclude": ["node_modules","library"]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "@terablitz/crownmill-manager",
+  "version": "1.0.0",
+  "description": "Crownmill management software",
+  "homepage": "https://github.com/web-essential/crownmill-manager#readme",
+  "bugs": {
+    "url": "https://github.com/web-essential/crownmill-manager/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-essential/crownmill-manager.git"
+  },
+  "license": "MIT",
+  "author": "terablitz",
+  "type": "module",
+  "main": "library/index.cjs",
+  "exports":{
+    "import": {
+    "default": "./library/index.esm.js",
+    "types": "./library/types/index.d.ts"
+    },
+    "require": {
+      "default": "./library/index.cjs",
+    "types": "./library/types/index.d.ts"
+    }
+  },
+  "files": ["library"],
+  "scripts": {
+      "build": "rollup -c"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
